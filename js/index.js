@@ -1,29 +1,13 @@
 // Map Showing Code
-(function() {
-    document.querySelector('.map-button').addEventListener('click', mapShowing)
-
-    function mapShowing() {
-        let x = document.querySelector('.map-container');
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        }
-        else {
-            x.style.display = "block";
-        }
-    }
+$(function() {
+    $('.map-button').click(function() {
+        $('.map-container').toggle(200);
+    })
 // Map Showing Code Ends
 // Form Showing
-    document.querySelector('.email-button').addEventListener('click', formShowing)
-
-    function formShowing() {
-        let x = document.querySelector('.form-container');
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        }
-        else {
-            x.style.display = "block";
-        }
-    }
+    $('.email-button').click(function() {
+        $('.form-container').toggle(200);
+    })    
 // Form Showing Ends
 //Smooth Scrolling
     $('a').click(function() {
@@ -32,5 +16,5 @@
         }, 500);
         return false;
     });
-    //Smooth Scrolling Ends
-})();
+//Smooth Scrolling Ends
+});

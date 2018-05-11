@@ -107,6 +107,9 @@ main article:first-child {
     height: 750px;
 }
 
+main article:first-child .first-text {
+    margin-bottom: 20px ;
+}
 main article:first-child h1 {
     font-family: 'Athene', 'Times New Roman', serif;
     font-size: 4.5rem;
