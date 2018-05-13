@@ -151,10 +151,28 @@ main article:nth-child(2) {
     grid-area: 1 / 1 / 7 / 4;
 }
 
-.excursions-photo img {
+.item img {
     width: 100%;
+    height: 620px;
 }
-
+.photo1 {
+    display: block;
+} 
+.photo2 {
+    display: none;
+}
+.photo3 {
+    display: none;
+}
+.photo4 {
+    display: none;
+}
+.photo5 {
+    display: none;
+}
+.link1 {
+    color: white;
+}
 .excursions-list {
     width: 100%;
     grid-area: 1 / 4 / 7 / 6;
