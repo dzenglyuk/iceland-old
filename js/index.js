@@ -1,8 +1,12 @@
-// Map Showing Code
 $(function() {
-    $('.map-button').click(function() {
-        $('.map-container').toggle(200);
-    })
+// Map Showing Code
+   $('.map-button').click(function() {
+       $('.map-modal').css('display', 'block'); 
+    });
+    
+    $('.close').click(function() {
+       $('.map-modal').css('display', 'none'); 
+    });
 // Map Showing Code Ends
 // Form Showing
     $('.email-button').click(function() {
@@ -49,4 +53,5 @@ $(function() {
         $(".link5").css('color', 'white');
     });
 //Excursion Photos Showing Ends
+
 });
