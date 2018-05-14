@@ -362,6 +362,7 @@ main article:last-child .form-container {
     border-radius: 3%;
     background-color: rgba(0,0,0,0.4);
     padding: 20px;
+    color: white;
 }
 
 .form-container input {
@@ -376,6 +377,7 @@ main article:last-child .form-container {
     color: white;
     font-family: 'Ikaros', Arial, sans-serif;
     font-size: 1.5rem;
+    
 }
 
 input:focus {
