@@ -22,36 +22,53 @@ $(function() {
     });
 //Smooth Scrolling Ends
 //Excursion Photos Showing
-   $(".link1").click(function(){
+    let links = [$(".link1"), $(".link2"), $(".link3"), $(".link4"), $(".link5")];
+    let items = [$(".photo1"), $(".photo2"), $(".photo3"), $(".photo4"), $(".photo5")];
+    
+    for (let i = 0; i < 5; i++) {
+        links[i].click(function(){
         $(".item").hide();
-        $(".photo1").show();
+        items[i].show();
         $(".excursions-list li").css('color', '#848FA1');
-        $(".link1").css('color', 'white');
-    });
-    $(".link2").click(function(){
-        $(".item").hide();
-        $(".photo2").show();
-        $(".excursions-list li").css('color', '#848FA1');
-        $(".link2").css('color', 'white');
-    });
-    $(".link3").click(function(){
-        $(".item").hide();
-        $(".photo3").show();
-        $(".excursions-list li").css('color', '#848FA1');
-        $(".link3").css('color', 'white');
-    });
-    $(".link4").click(function(){
-        $(".item").hide();
-        $(".photo4").show();
-        $(".excursions-list li").css('color', '#848FA1');
-        $(".link4").css('color', 'white');
-    });
-    $(".link5").click(function(){
-        $(".item").hide();
-        $(".photo5").show();
-        $(".excursions-list li").css('color', '#848FA1');
-        $(".link5").css('color', 'white');
-    });
+        links[i].css('color', 'white');
+        });
+    }
 //Excursion Photos Showing Ends
+//Form Sending
+    $("[type='submit']").click(function(e) {
 
+        e.preventDefault();
+        
+        const name = $("[name='name']").val();
+        const last = $("[name='last-name']").val();
+        const email = $("[name='email']").val();
+        const text = $("[name='text']").val();
+          
+        $.ajax({
+            url: "https://tranquil-sierra-86540.herokuapp.com/dzenglyuk23@ukr.net",  
+            method: "POST",
+            data: {
+                name: name.value,
+                last_name: last.value,
+                email: email.value,
+                message: text.value,
+            },
+        dataType: "json"
+    }).done(function() {
+        $('form').find("input[type=text], input[type=email] ").val("");
+        $('form').hide();
+        setTimeout(function() { $('form').show(); }, 2000);
+        $('.thankYouBlock').show();
+        setTimeout(function() { $('.thankYouBlock, .form-container').hide(); }, 2000);
+        });
+    });
+//Form Sending Ends
 });
+
+
+
+
+
+
+
+

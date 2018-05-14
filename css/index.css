@@ -406,6 +406,12 @@ form div {
     height: 50px;
     margin: auto;
 }
+.form-container .thankYouBlock {
+    display:none;
+    font-size: 1.5rem;
+}
+
+
 
 /*Form Code Ends*/
 
