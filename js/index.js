@@ -22,8 +22,8 @@ $(function() {
     });
 //Smooth Scrolling Ends
 //Excursion Photos Showing
-    let links = [$(".link1"), $(".link2"), $(".link3"), $(".link4"), $(".link5")];
-    let items = [$(".photo1"), $(".photo2"), $(".photo3"), $(".photo4"), $(".photo5")];
+    const links = [$(".link1"), $(".link2"), $(".link3"), $(".link4"), $(".link5")];
+    const items = [$(".photo1"), $(".photo2"), $(".photo3"), $(".photo4"), $(".photo5")];
 
     for (let i = 0; i < 5; i++) {
         links[i].click(function() {
