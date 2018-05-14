@@ -108,8 +108,9 @@ main article:first-child {
 }
 
 main article:first-child .first-text {
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
 }
+
 main article:first-child h1 {
     font-family: 'Athene', 'Times New Roman', serif;
     font-size: 4.5rem;
@@ -159,24 +160,31 @@ main article:nth-child(2) {
     width: 100%;
     height: 620px;
 }
+
 .photo1 {
     display: block;
-} 
+}
+
 .photo2 {
     display: none;
 }
+
 .photo3 {
     display: none;
 }
+
 .photo4 {
     display: none;
 }
+
 .photo5 {
     display: none;
 }
+
 .link1 {
     color: white;
 }
+
 .excursions-list {
     width: 100%;
     grid-area: 1 / 4 / 7 / 6;
@@ -256,17 +264,23 @@ main article .location-photo img {
 /*Map Code*/
 
 .map-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 150px;
     top: 50px;
-    width: 80%; /* Full width */
-    height: 90%; /* Full height */
+    width: 80%;
+    /* Full width */
+    height: 90%;
+    /* Full height */
     /*overflow: auto;  Enable scroll if needed 
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 .modal-content {
     position: relative;
     background-color: grey;
@@ -274,7 +288,7 @@ main article .location-photo img {
     padding: 0;
     border: 1px solid #888;
     width: 70%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .close {
@@ -290,9 +304,10 @@ main article .location-photo img {
     text-decoration: none;
     cursor: pointer;
 }
+
 .map-header {
     padding: 2px 16px;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
 }
 
@@ -301,8 +316,9 @@ main article .location-photo img {
     width: 1000px;
     height: 400px;
     margin: auto;
-    
+
 }
+
 iframe {
     margin: auto;
     width: 1000px;
@@ -360,7 +376,7 @@ main article:last-child .form-container {
     height: 400px;
     margin: auto;
     border-radius: 3%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
     color: white;
 }
@@ -373,11 +389,11 @@ main article:last-child .form-container {
     border-bottom: 2px solid grey;
     box-sizing: border-box;
     text-align: center;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     font-family: 'Ikaros', Arial, sans-serif;
     font-size: 1.5rem;
-    
+
 }
 
 input:focus {
@@ -408,8 +424,9 @@ form div {
     height: 50px;
     margin: auto;
 }
+
 .form-container .thankYouBlock {
-    display:none;
+    display: none;
     font-size: 1.5rem;
 }
 
