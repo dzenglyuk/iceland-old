@@ -1,39 +1,18 @@
 $(function() {
-// Map Showing Code
+//Map Showing Code
     $('.map-button').click(function() {
-        $('.map-modal').css('display', 'block');
+        $('.map-modal').show();
     });
 
     $('.close').click(function() {
-        $('.map-modal').css('display', 'none');
+        $('.map-modal').hide();
     });
-// Map Showing Code Ends
-// Form Showing
+//Map Showing Code Ends
+//Form Showing
     $('.email-button').click(function() {
         $('.form-container').toggle(200);
     })
-// Form Showing Ends
-//Smooth Scrolling
-    $('a').click(function() {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 500);
-        return false;
-    });
-//Smooth Scrolling Ends
-//Excursion Photos Showing
-    const links = [$(".link1"), $(".link2"), $(".link3"), $(".link4"), $(".link5")];
-    const items = [$(".photo1"), $(".photo2"), $(".photo3"), $(".photo4"), $(".photo5")];
-
-    for (let i = 0; i < 5; i++) {
-        links[i].click(function() {
-            $(".item").hide();
-            items[i].show();
-            $(".excursions-list li").css('color', '#848FA1');
-            links[i].css('color', 'white');
-        });
-    }
-//Excursion Photos Showing Ends
+//Form Showing Ends
 //Form Sending
     $("[type='submit']").click(function(e) {
 
@@ -48,10 +27,10 @@ $(function() {
             url: "https://tranquil-sierra-86540.herokuapp.com/dzenglyuk23@ukr.net",
             method: "POST",
             data: {
-                name: name.value,
-                last_name: last.value,
-                email: email.value,
-                message: text.value,
+                name: name,
+                last_name: last,
+                email: email,
+                message: text
             },
             dataType: "json"
         }).done(function() {
@@ -63,4 +42,31 @@ $(function() {
         });
     });
 //Form Sending Ends
+//Smooth Scrolling
+    $('a').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 500);
+        return false;
+    });
+//Smooth Scrolling Ends
+//Excursion Photos Showing
+    function changeColor(e, value) {
+        e.css('color', value);
+    }
+    
+    const links = [$(".link1"), $(".link2"), $(".link3"), $(".link4"), $(".link5")];
+    const items = [$(".photo1"), $(".photo2"), $(".photo3"), $(".photo4"), $(".photo5")];
+
+    for (let i = 0; i < 5; i++) {
+        links[i].click(function() {
+            $(".item").hide();
+            items[i].show();
+            // $(".excursions-list li").css('color', '#848FA1');
+            // links[i].css('color', 'white');
+            changeColor($(".excursions-list li"),'#848FA1');
+            changeColor(links[i],'white');
+        });
+    }
+//Excursion Photos Showing Ends
 });

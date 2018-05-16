@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Ikaros';
-    src: url(fonts/ikaros.otf);
+    src: url(css/fonts/ikaros.otf);
     src: url("css/fonts/ikaros.woff") format("woff"),
     url("css/fonts/ikaros.woff2") format("woff2");
 }
@@ -73,7 +73,7 @@ header nav p {
     line-height: 1.25rem;
 }
 
-header article {
+header .article {
     height: 600px;
     display: grid;
     grid-template-columns: 10% 10% 25% 55%;
@@ -81,20 +81,53 @@ header article {
     color: #848FA1;
 }
 
-header article p:first-child {
+header .article p:first-child {
     margin: 0;
     grid-area: 2 / 2 / 3 / 4;
     font-family: 'Athene', 'Times New Roman', serif;
-    font-size: 10rem;
+    font-size: 15vw;
     line-height: 7rem;
     color: black;
 }
 
-header article p:last-child {
+header .article p:last-child {
     grid-area: 3 / 2 / 4 / 4;
-    font-size: 1.3rem;
+    font-size: 1.5vw;
 }
 
+@media (max-width: 570px) {
+    header {
+        background-image: url(../img/background-rock-min.jpg); 
+    }
+    header .article p:first-child {
+        font-size:  20vw;
+    }
+    header .article p:last-child {
+        grid-area: 3 / 2 /4 / 5;
+        font-size:  3vw;
+    }
+}
+
+@media (max-width: 440px) {
+    header nav {
+        display: block;    
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav p,li {
+        text-align: center;
+        font-size: 2rem;
+        margin: auto;
+    }
+    header nav p {
+        margin-bottom: 30px;
+    }
+    header .article p:first-child {
+        font-size:  26vw;
+    }
+}
+ 
 /*Header end*/
 
 /*Section "Home start"*/
@@ -103,17 +136,17 @@ main {
     font-size: 1.4rem;
 }
 
-main article:first-child {
+main .article:first-child {
     height: 750px;
 }
 
-main article:first-child .first-text {
+main .article:first-child .first-text {
     margin-bottom: 20px;
 }
 
-main article:first-child h1 {
+main .article:first-child h1 {
     font-family: 'Athene', 'Times New Roman', serif;
-    font-size: 4.5rem;
+    font-size: 6vw;
     text-align: center;
     width: 60%;
     margin: auto;
@@ -121,21 +154,30 @@ main article:first-child h1 {
     margin-bottom: 50px;
 }
 
-main article p {
+main .article p {
     width: 60%;
     margin: auto;
     text-align: center;
 }
 
-main article p:first-child {
+main .article p:first-child {
     font-size: 1.5rem;
+}
+
+@media (max-width: 750px) {
+    main .article:first-child h1 {
+        font-size: 10vw;
+    }
+    .wide {
+        width: 90%;
+    }
 }
 
 /*Section "Home end*/
 
 /*Sectin Excursions start*/
 
-main article:nth-child(2) {
+main .article:nth-child(2) {
     height: 750px;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -186,27 +228,76 @@ main article:nth-child(2) {
 }
 
 .excursions-list {
-    width: 100%;
+    width: 94%;
     grid-area: 1 / 4 / 7 / 6;
+    
 }
 
-article div ul {
+.excursions-list ul li {
+    font-size: 2.2vw;
+}
+
+.article div ul {
     font-family: 'Athene', 'Times New Roman', serif;
     font-size: 2rem;
 }
 
-article div ul li {
+.article div ul li {
     list-style-type: none;
     border-bottom: 1px solid;
     margin-bottom: 20px;
     padding-bottom: 19px;
 }
 
+@media (max-width: 800px) {
+    .excursions-list {
+        width: 80%;
+        font-size: 2vw;
+        padding-right: 10px;
+    }
+    .item img {
+        height: 450px;
+    }
+}
+@media (max-width: 650px) {
+    .excursions-list {
+        width: 85%;
+        font-size: 3vw;
+    }
+    .excursions-list.title {
+        font-size: 1.5rem;
+    }
+    .article div ul li {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 540px) {
+    .excursions-photo {
+        grid-area: 3 / 1 / 7 / 6;
+    }
+    .excursions-list {
+        grid-area: 1 / 1 / 3 / 6;
+    }
+    .excursions-list li {
+        width: 20%;
+        float: left;
+    }
+    main .article:nth-child(2) {
+        height: 650px;
+    }
+}
+
+@media (max-width: 420px) {
+    .item img {
+        height: 300px;
+    }
+}
 /*Sectin Excursions end*/
 
 /*Section Location start*/
 
-main article:nth-child(3) {
+main .article:nth-child(3) {
     height: 750px;
     display: flex;
 }
@@ -215,19 +306,19 @@ main article:nth-child(3) {
     width: 55%;
 }
 
-main article .location-text p {
+main .article .location-text p {
     text-align: left;
     font-size: 1.6rem;
     color: #5C5A5A;
 }
 
-main article .location-text .atlantic {
+main .article .location-text .atlantic {
     font-family: 'Athene', 'Times New Roman', serif;
     font-size: 4.2rem;
     color: white;
 }
 
-main article .location-text .before-map-text {
+main .article .location-text .before-map-text {
     font-size: 1.4rem;
     color: #848FA1;
 }
@@ -243,22 +334,26 @@ button {
     border: 1px solid #848FA1;
     text-align: center;
     background-color: #030409;
-
 }
 
 button:hover {
     background-color: #3F474E;
 }
 
-main article .location-photo {
+main .article .location-photo {
     width: 45%;
 }
 
-main article .location-photo img {
+main .article .location-photo img {
     width: 100%;
     height: 100%;
 }
-
+@media (max-width: 900px) {
+    main .article:nth-child(3) {
+        display: none;
+    }
+    
+}
 /*Section Location end*/
 
 /*Map Code*/
@@ -329,7 +424,7 @@ iframe {
 
 /*Section Gallery Starts*/
 
-main article:last-child {
+main .article:last-child {
     background-image: url('../img/background-gallery.jpg');
     height: 1400px;
     background-position: center;
@@ -340,17 +435,17 @@ main article:last-child {
     grid-template-rows: 33% 34% 33%;
 }
 
-main article:last-child div:first-child {
+main .article:last-child div:first-child {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-main article:last-child div>div {
+main .article:last-child div>div {
     width: 200px;
     height: 70px;
     margin: auto;
 }
 
-main article .gallery-title {
+main .article .gallery-title {
     width: 80%;
     font-family: 'Athene', 'Times New Roman', serif;
     font-size: 4rem;
@@ -358,7 +453,7 @@ main article .gallery-title {
 
 }
 
-main article .gallery-button {
+main .article .gallery-button {
     background-color: transparent;
     margin: auto;
 }
@@ -369,14 +464,14 @@ main article .gallery-button {
 
 /*Form Code*/
 
-main article:last-child .form-container {
+main .article:last-child .form-container {
     grid-area: 3 / 2 / 4 / 3;
     display: none;
     width: 600px;
     height: 400px;
     margin: auto;
     border-radius: 3%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: black;
     padding: 20px;
     color: white;
 }
@@ -430,6 +525,14 @@ form div {
     font-size: 1.5rem;
 }
 
+@media (max-width: 700px) {
+    main .article:last-child div:first-child {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+    main .article:last-child {
+        height: 600px;
+    }
+}
 
 
 /*Form Code Ends*/
@@ -478,6 +581,21 @@ footer div p {
 footer li:hover {
     background-color: #23262B;
     color: #F0F2F6;
+}
+
+@media (max-width: 700px) {
+    footer div {
+        display: block;
+    }
+    footer ul,p {
+        display: block;
+        width: 100%;
+    }
+    footer ul li {
+        display: block;
+        width: 100%;
+        margin: 0; 
+    }
 }
 
 /*Footer Ends*/
