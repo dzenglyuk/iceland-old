@@ -129,6 +129,13 @@ img.hover-shadow {
   height: 200px;
 }
 
+.column img:hover {
+  width: 90%;
+  height: 180px;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
 .mySlides {
   height: 500px;
 }
