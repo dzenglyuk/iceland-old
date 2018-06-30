@@ -1,20 +1,26 @@
 // Open the Modal
-function openModal() {
+$('.column img').click(function() {
   document.getElementById('myModal').style.display = "block";
-}
+});
+// Open the Modal End
 
 // Close the Modal
-function closeModal() {
+$('.close').click(function() {
   document.getElementById('myModal').style.display = "none";
-}
+});
+// Close the Modal End
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// Next/Previous Controls 
+$('.next').click(function() {
+  showSlides(slideIndex += 1);
+});
+$('.prev').click(function() {
+  showSlides(slideIndex += -1);
+});
+// Next/Previous Controls End 
 
 // Thumbnail image controls
 function currentSlide(n) {
@@ -22,20 +28,17 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  const text = document.querySelectorAll('.mySlides img');
-  var captionText = document.getElementById("caption");
+  let i;
+  const slides = $('.mySlides');
+  const text = $('.mySlides img');
+  const captionText = document.getElementById('caption');
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  // for (i = 0; i < dots.length; i++) {
-  //   dots[i].className = dots[i].className.replace(" active", "");
-  // }
+  
   slides[slideIndex-1].style.display = "block";
-  // dots[slideIndex-1].className += " active";
+  
   captionText.innerHTML = text[slideIndex-1].alt;
 }
