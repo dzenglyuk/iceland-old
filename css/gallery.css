@@ -34,7 +34,7 @@
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 90%;
+  width: 70%;
   max-width: 1200px;
 }
 
@@ -130,10 +130,7 @@ img.hover-shadow {
 }
 
 .column img:hover {
-  width: 90%;
-  height: 180px;
-  margin-top: 5%;
-  margin-left: 5%;
+  opacity: 0.6;
 }
 
 .mySlides {
@@ -216,13 +213,22 @@ footer div p {
     line-height: 1.25rem;
 }
 
+footer li a:hover {
+    background-color: #23262B;
+    color: #F0F2F6;
+}
+
 footer li:hover {
     background-color: #23262B;
     color: #F0F2F6;
 }
 
 header a {
-  text-decoration: none;
-  color: #848FA1;
+    text-decoration: none;
+    color: #848FA1;
 }
 
+header a:hover {
+    background-color: #23262B;
+    color: #F0F2F6;
+} 
