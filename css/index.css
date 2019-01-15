@@ -25,6 +25,52 @@ body {
     background-color: #030409;
 }
 
+/*Preloader Starts*/
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+    
+}
+.counter {
+    text-align: center;
+    position: relative;
+    width: 200px;
+}
+.counter h1, h2, hr {
+    margin: 0;
+    padding: 0;
+}
+.counter h2 {
+      font-size: 40px;
+      font-weight: 100;
+      color: grey;
+}  
+.counter h1 {
+      color: white;
+      font-size: 60px;
+      margin-top: -10px;
+}
+.counter hr {
+      background: grey; 
+      border: none;
+      height: 1px;
+} 
+.done {
+    opacity: 0;
+    visibility: hidden;
+}  
+/*Preloader Ends*/
 /*Header start*/
 
 header {

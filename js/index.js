@@ -1,4 +1,18 @@
 $(function() {
+// Preloader Code
+    let counter = 0;
+    let c = 0;
+    let i = setInterval(function(){
+        $(".preloader .counter h1").html(c + "%");
+        $(".preloader .counter hr").css("width", c + "%");
+        counter++;
+        c++;
+      
+        if(counter == 101) {
+            clearInterval(i);
+        }
+    }, 50);
+// Preloader Code Ends
 //Map Showing Code
     $('.map-button').click(function() {
         $('.map-modal').show();
@@ -8,6 +22,13 @@ $(function() {
         $('.map-modal').hide();
     });
 //Map Showing Code Ends
+// Redirection Button
+    $('.gallery-button').click(() => {
+        // window.location.href = 'gallery.html';
+        $(location).attr('href','gallery.html');
+    })
+    
+// Redirection Button Ends
 //Form Showing
     $('.email-button').click(function() {
         $('.form-container').toggle(200);
@@ -70,3 +91,11 @@ $(function() {
     }
 //Excursion Photos Showing Ends
 });
+$(window).on('load', () => {
+    setTimeout(() => {
+        let preloader = $('.preloader');
+        if (!preloader.hasClass('done')) {
+            preloader.addClass('done');
+        }
+    }, 1000)
+ });
